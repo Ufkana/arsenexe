@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка 2 игрока</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="backg">
+
+<header id="header">
+    <a href="st.html" class="button-link">Главная</a>
+    <a href="puzzles.html" class="button-link">Загадки</a>
+    <a href="guess.html" class="button-link">Угадайка</a>
+</header>
+
+<div id="content">
+    <section id="center">
+        <h1>Угадай число — игра для двух игроков</h1>
+
+        <script>
+            alert("Игрок 1, задумай число от 1 до 100.");
+            let secret = parseInt(prompt("Игрок 1, введи задуманное число:"));
+
+            alert("Теперь игрок 2 должен его угадать!");
+
+            let guess;
+            let attempts = 0;
+
+            while (guess !== secret) {
+                guess = parseInt(prompt("Игрок 2, введи свой вариант:"));
+                attempts++;
+
+                if (guess > secret) alert("Меньше!");
+                else if (guess < secret) alert("Больше!");
+                else alert("Верно! Ты угадал за " + attempts + " попыток!");
+            }
+        </script>
+
+    </section>
+</div>
+
+<footer id="footer">
+    © 2025 ЦСПО ИИП
+</footer>
+
+</body>
+</html>

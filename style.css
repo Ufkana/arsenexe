@@ -1,0 +1,106 @@
+:root {
+    --primary: #3776ab;
+    --primary-light: #5a92c7;
+    --primary-pale: #1e3a5f;
+
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+
+    --text: #e2e8f0;
+    --text-light: #94a3b8;
+
+    --accent: #c75412;
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    --radius: 14px;
+    --transition: .3s ease;
+}
+
+/* Фон */
+.backg {
+    margin: 0;
+    background-image: url('1d.png');
+    background-size: cover;
+    background-position: center 60%;
+    background-attachment: fixed;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+}
+
+/* Меню */
+#header {
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 0 8px;
+    background-color: var(--accent);
+    color: #111;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.button-link:hover {
+    background-color: #ff6f1a;
+    transform: translateY(-2px);
+}
+
+/* Центр */
+#center {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+    background: rgba(0,0,0,0.55);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* КРУГЛАЯ ФОТОГРАФИЯ */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-light);
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* Текст */
+#box_text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+#box_text p {
+    margin-bottom: 15px;
+}
+
+/* Ссылка внутри текста */
+.nice-link {
+    color: var(--primary-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.nice-link:hover {
+    color: #fff;
+}
+
+/* Футер */
+#footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}

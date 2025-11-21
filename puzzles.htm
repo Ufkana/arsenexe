@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Загадки — Лабораторная №11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="backg">
+
+<header id="header">
+    <a href="studentcard.htm".html" class="button-link">Главная</a>
+    <a href="puzzles.html" class="button-link">Загадки</a>
+    <a href="guess.html" class="button-link">Угадайка</a>
+</header>
+
+<div id="content">
+    <section id="center">
+        <h1>Игра «Загадки» — DOM версия</h1>
+
+        <div id="riddle-container">
+
+            <div class="riddle">
+                <p>1. Без рук, без ног, а рисовать умеет.</p>
+                <input type="text" id="r1">
+            </div>
+
+            <div class="riddle">
+                <p>2. Зимой и летом одним цветом.</p>
+                <input type="text" id="r2">
+            </div>
+
+            <div class="riddle">
+                <p>3. Висит груша — нельзя скушать.</p>
+                <input type="text" id="r3">
+            </div>
+
+            <div class="riddle">
+                <p>4. Жидкое, а не вода; белое, а не снег.</p>
+                <input type="text" id="r4">
+            </div>
+
+            <div class="riddle">
+                <p>5. По горам, по долам ходит шуба да баран.</p>
+                <input type="text" id="r5">
+            </div>
+
+            <button id="checkBtn" class="button-link" style="margin-top:20px;">
+                Проверить ответы
+            </button>
+
+            <h2 id="result"></h2>
+        </div>
+
+        <script>
+            // --- Функция для проверки одного ответа ---
+            function checkAnswer(input, ...validAnswers) {
+                let user = document.getElementById(input).value.trim().toLowerCase();
+                return validAnswers.includes(user);
+            }
+
+            // --- Слушатель кнопки ---
+            document.getElementById("checkBtn").addEventListener("click", function () {
+
+                let score = 0;
+
+                if (checkAnswer("r1", "мороз", "иней")) score++;
+                if (checkAnswer("r2", "елка", "ёлка")) score++;
+                if (checkAnswer("r3", "лампочка")) score++;
+                if (checkAnswer("r4", "молоко")) score++;
+                if (checkAnswer("r5", "овца", "баран")) score++;
+
+                document.getElementById("result").textContent =
+                    "Ваш результат: " + score + " из 5";
+            });
+        </script>
+
+    </section>
+</div>
+
+<footer id="footer">
+    © 2025 ЦСПО ИИП
+</footer>
+
+</body>
+</html>
